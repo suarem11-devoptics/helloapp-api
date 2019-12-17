@@ -20,7 +20,7 @@ pipeline {
       }
       steps {
         script{
-          error 'fake error to force failure in test stage/gate!!'
+          error 'fake error to force failure in test stage/gate, adding ticket!!'
           if (fileExists('../helloworld-api/development')) {        
             copyArtifacts projectName: '../helloworld-api/development'
             gateConsumesArtifact file: 'application.sh'
